@@ -13,7 +13,7 @@ const createArticle = async (req, res) => {
             const params = [name, pw, content];
             const [row] = await connection.execute(sql, params)
             const data = {
-                success: false,
+                success: true,
                 data: row.insertId,
             }
             res.json(data)
